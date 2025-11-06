@@ -1,0 +1,295 @@
+/**
+ * Shop Page – Understated Luxury Styling
+ * Matches Home.css tone
+ * Deep charcoals, muted golds, and elegant grid balance
+ */
+
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #e8e8e8;
+  --text-secondary: #b0b0b0;
+  --accent-gold: #d4af37;
+  --accent-gold-muted: #8c7a3a;
+  --accent-gold-hover: #e0c45a;
+  --border: #2a2a2a;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* --- SHOP PAGE BASE --- */
+.shop-page {
+  background: black;
+  color: var(--text-primary);
+  padding: 7rem 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.shop-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 15%, rgba(255,255,255,0.05), transparent 60%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shop-page h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-gold);
+  margin-bottom: 4rem;
+  z-index: 1;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, auto);
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1400px;
+  z-index: 2;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+/* Responsive fallback: reduce columns on smaller screens */
+@media (max-width: 1400px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fade-in animation for luxury feel */
+.product-card {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUpCard 0.6s ease forwards;
+}
+.product-card:nth-child(2n) { animation-delay: 0.1s; }
+.product-card:nth-child(3n) { animation-delay: 0.2s; }
+.product-card:nth-child(4n) { animation-delay: 0.3s; }
+
+@keyframes fadeUpCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- PRODUCT CARD REDESIGN (OVERRIDES) --- */
+.product-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures equal height in grid */
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(212, 175, 55, 0.05), transparent 70%);
+  opacity: 0;
+  transition: var(--transition);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-gold-muted);
+  box-shadow: var(--shadow-md);
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+/* --- IMAGE AREA --- */
+.product-card__media {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #000;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+  filter: brightness(0.9);
+}
+
+.product-card:hover .product-card__image {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+/* --- CONTENT AREA --- */
+.product-card__content {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex-grow: 1;
+}
+
+.product-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.product-card__meta {
+  color: var(--accent-gold);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.product-card__description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* --- FOOTER --- */
+.product-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding: 1rem 1.25rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.product-card__tags {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-card__tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.product-card__tag.sale { color: #e15a5a; border-color: #e15a5a66; }
+.product-card__tag.new { color: #59c3a8; border-color: #59c3a866; }
+.product-card__tag.popular { color: var(--accent-gold); border-color: var(--accent-gold-muted); }
+
+/* --- BUTTON: FIXED HOVER WITH LUXURY LIFT --- */
+.product-card__button {
+  background: var(--accent-gold);
+  color: #111;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.65rem 1.3rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(212, 175, 55, 0.2);
+}
+
+.product-card__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.product-card__button:hover {
+  background: var(--accent-gold-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.35);
+}
+
+.product-card__button:active {
+  transform: translateY(-1px);
+}
+
+.product-card__button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .shop-page {
+    padding: 5rem 6vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-page {
+    padding: 4rem 5vw;
+  }
+  .shop-page h1 {
+    font-size: 2.2rem;
+  }
+  .product-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .product-card__button {
+    width: 100%;
+    text-align: center;
+  }
+}
