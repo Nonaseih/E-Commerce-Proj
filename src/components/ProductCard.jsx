@@ -22,15 +22,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useCart } from "../context/CartContext";
 import "./styles/ProductCard.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
-  const { addToCart } = useCart(); // ✅ moved inside component
+  const { addToCart } = useCart(); //
 
   if (!product) return null;
 
   const { id, img, title, price, rating, description, tags = [] } = product;
 
   return (
+    <Link to={`/shop/${id}`}>
     <article className="product-card" aria-labelledby={`product-${id}`}>
       <figure className="product-card__media">
         <img
@@ -77,6 +79,7 @@ const ProductCard = ({ product }) => {
         </footer>
       </section>
     </article>
+    </Link>
   );
 };
 

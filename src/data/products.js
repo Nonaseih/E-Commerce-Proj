@@ -10,14 +10,17 @@
     * - Author          : fortu
     * - Modification    : Added 24 unique products
 **/
+import Aj1 from   "/images/jrd.jpg"
 
-const PRODUCTS = [
+
+
+const Products = [
   {
     id: 1,
     title: "Air Jordan 1 Retro High OG",
     price: "59.99",
     rating: "4.5",
-    img: "./images/jrd.jpg",
+    img: Aj1,
     tags: ["popular"],
     desc: "Comfortable everyday sneakers"
   },
@@ -26,7 +29,7 @@ const PRODUCTS = [
     title: "Air Jordan 3 “White Cement”",
     price: "89.99",
     rating: "4.8",
-    img: "./images/Jd2.jpg",
+    img: "/images/Jd2.jpg",
     tags: ["new"],
     desc: "Comfortable everyday sneakers"
   },
@@ -35,7 +38,7 @@ const PRODUCTS = [
     title: "Air Jordan 4 “Bred”",
     price: "129.99",
     rating: "4.7",
-    img: "./images/jd3.webp",
+    img: "/images/jd3.webp",
     tags: ["popular"],
     desc: "Comfortable everyday sneakers"
   },
@@ -44,7 +47,7 @@ const PRODUCTS = [
     title: "Air Jordan 5 “Fire Red”",
     price: "199.99",
     rating: "4.6",
-    img: "./images/jd4.jpg",
+    img: "/images/jd4.jpg",
     tags: ["new"],
     desc: "Comfortable everyday sneakers"
   },
@@ -53,7 +56,7 @@ const PRODUCTS = [
     title: "Air Jordan 6 “Infrared”Air Jordan 6 “Infrared”",
     price: "24.99",
     rating: "4.3",
-    img: "./images/jd5.jpg",
+    img: "/images/jd5.jpg",
     tags: ["sale"],
     desc: "100% cotton comfort"
   },
@@ -62,7 +65,7 @@ const PRODUCTS = [
     title: "Air Jordan 7 “Bordeaux”",
     price: "79.99",
     rating: "4.4",
-    img: "./images/jd6.avif",
+    img: "/images/jd6.avif",
     tags: ["popular"],
     desc: "Classic style"
   },
@@ -71,7 +74,7 @@ const PRODUCTS = [
     title: "Air Jordan 11 “Concord”",
     price: "29.99",
     rating: "4.2",
-    img: "./images/jd7.jpg",
+    img: "/images/jd7.jpg",
     tags: ["new"],
     desc: "Extra thick comfort"
   },
@@ -80,7 +83,7 @@ const PRODUCTS = [
     title: "Air Jordan 12 “Flu Game”",
     price: "39.99",
     rating: "4.1",
-    img: "./images/jd8.jpg",
+    img: "/images/jd8.jpg",
     tags: ["sale"],
     desc: "Adjustable LED lighting"
   },
@@ -89,7 +92,7 @@ const PRODUCTS = [
     title: "Air Jordan 13 “He Got Game”",
     price: "19.99",
     rating: "4.0",
-    img: "./images/jrd9.webp",
+    img: "/images/jrd9.webp",
     tags: ["popular"],
     desc: "Iconic design"
   },
@@ -98,7 +101,7 @@ const PRODUCTS = [
     title: "Air Jordan 14 “Last Shot”",
     price: "34.99",
     rating: "4.5",
-    img: "./images/jd10.jpg",
+    img: "/images/jd10.jpg",
     tags: ["new"],
     desc: "Ergonomic design"
   },
@@ -107,7 +110,7 @@ const PRODUCTS = [
     title: "Air Jordan 23 “Titan”",
     price: "14.99",
     rating: "4.3",
-    img: "./images/jd11.jpg",
+    img: "/images/jd11.jpg",
     tags: ["sale"],
     desc: "Modern ceramic design"
   },
@@ -116,7 +119,7 @@ const PRODUCTS = [
     title: "Air Jordan XXXVII (37)",
     price: "44.99",
     rating: "4.6",
-    img: "./images/jd12.avif",
+    img: "/images/jd12.avif",
     tags: ["popular"],
     desc: "Minimalist style"
   },
@@ -125,7 +128,7 @@ const PRODUCTS = [
     title: "Nike LeBron 21",
     price: "69.99",
     rating: "4.7",
-    img: "./images/jd13.avif",
+    img: "/images/jd13.avif",
     tags: ["new"],
     desc: "High-performance sneakers"
   },
@@ -134,7 +137,7 @@ const PRODUCTS = [
     title: "Nike KD 17",
     price: "24.99",
     rating: "4.2",
-    img: "./images/jd14.avif",
+    img: "/images/jd14.avif",
     tags: ["sale"],
     desc: "Lightweight design"
   },
@@ -143,7 +146,7 @@ const PRODUCTS = [
     title: "Nike Kobe 6 Protro “Grinch”",
     price: "29.99",
     rating: "4.4",
-    img: "./images/jd15.webp",
+    img: "/images/jd15.webp",
     tags: ["popular"],
     desc: "Precision"
   },
@@ -152,7 +155,7 @@ const PRODUCTS = [
     title: "Nike Zoom Freak 5 (Giannis)",
     price: "9.99",
     rating: "4.3",
-    img: "./images/jd16.jpg",
+    img: "/images/jd16.jpg",
     tags: ["new"],
     desc: "Versatile performance"
   },
@@ -161,7 +164,7 @@ const PRODUCTS = [
     title: "Nike Kyrie 7",
     price: "19.99",
     rating: "4.1",
-    img: "./images/jd17.jpg",
+    img: "/images/jd17.jpg",
     tags: ["sale"],
     desc: "Protective design"
   },
@@ -179,7 +182,7 @@ const PRODUCTS = [
     title: "Nike Air Foamposite One",
     price: "15.99",
     rating: "4.2",
-    img: "./images/jd19.jpg",
+    img: "/images/jd19.jpg",
     tags: ["new"],
     desc: "Futuristic style"
   },
@@ -188,7 +191,7 @@ const PRODUCTS = [
     title: "Nike Zoom GT Cut 3",
     price: "49.99",
     rating: "4.6",
-    img: "./images/jd20.avif",
+    img: "/images/jd20.avif",
     tags: ["sale"],
     desc: "Responsive cushioning"
   },
@@ -197,7 +200,7 @@ const PRODUCTS = [
     title: "Nike Air Max 1",
     price: "4.99",
     rating: "4.0",
-    img: "./images/jd21.webp",
+    img: "/images/jd21.webp",
     tags: ["popular"],
     desc: "Iconic design"
   },
@@ -206,7 +209,7 @@ const PRODUCTS = [
     title: "Nike Air Max 97",
     price: "22.99",
     rating: "4.4",
-    img: "./images/jd22.jpg",
+    img: "/images/jd22.jpg",
     tags: ["new"],
     desc: "Sleek style"
   },
@@ -215,7 +218,7 @@ const PRODUCTS = [
     title: "Nike Dunk Low “Panda”",
     price: "7.99",
     rating: "4.3",
-    img: "./images/jd23.jpg",
+    img: "/images/jd23.jpg",
     tags: ["sale"],
     desc: "Classic look"
   },
@@ -224,10 +227,10 @@ const PRODUCTS = [
     title: "Nike Air Force 1 ’07",
     price: "29.99",
     rating: "4.5",
-    img: "./images/j24.jpg",
+    img: "/images/j24.jpg",
     tags: ["popular"],
     desc: "Timeless design"
   }
 ];
 
-export default PRODUCTS;
+export default Products;

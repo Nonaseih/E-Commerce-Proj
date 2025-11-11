@@ -10,12 +10,6 @@
     * - Author          : fortu
     * - Modification    : 
 **/
-/**
- * @description      : Centralized Cart State Management
- * @author           : fortu
- * @version          : 1.2.0
- * @date             : 27/10/2025
- */
 
 import React, { createContext, useContext, useReducer, useEffect } from "react";
 

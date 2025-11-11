@@ -32,7 +32,7 @@ import State from "./pages/State";
 import Checkout from "./pages/Checkout";
 
 import "./App.css";
-
+import ShoeDetails from "./pages/ShoeDetails";
 export default function App() {
   return (
     <div className="app">
@@ -42,6 +42,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:id" element={<ShoeDetails/>} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
