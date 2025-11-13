@@ -16,7 +16,7 @@ import React, { createContext, useContext, useReducer, useEffect } from "react";
 const CartContext = createContext(null);
 const STORAGE_KEY = "ns_kicks_cart_v1";
 
-// --- Utils ---
+//--- Utils --- //
 const parsePrice = (value) => {
   const n = typeof value === "number" ? value : parseFloat(value);
   return Number.isFinite(n) ? n : 0;
