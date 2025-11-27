@@ -19,19 +19,24 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./styles/Cart.css";
+
 
 const Cart = () => {
   const { items, removeFromCart, clearCart } = useCart();
   const navigate = useNavigate();
 
   const total = items.reduce((sum, item) => sum + item.price, 0);
+  
 
   if (items.length === 0) {
     return (
       <section className="cart-page luxury">
         <div className="cart-empty">
           <h2>Your Cart is Empty</h2>
+
+          
           <button onClick={() => navigate("/shop")} className="shop-btn">
             Back to Shop
           </button>

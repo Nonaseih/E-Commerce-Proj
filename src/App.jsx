@@ -30,6 +30,8 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import State from "./pages/State";
 import Checkout from "./pages/Checkout";
+import { store } from "./Redux/store";
+import { Provider } from "react-redux";
 
 import "./App.css";
 import ShoeDetails from "./pages/ShoeDetails";
@@ -38,7 +40,7 @@ export default function App() {
     <div className="app">
       <Navbar />
 
-      <main>
+      <main store={store}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />

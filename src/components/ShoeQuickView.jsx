@@ -30,7 +30,6 @@ const ShoeQuickView = ({ product, close }) => {
           <p className="rating">⭐ {product.rating}</p>
 
           <p className="desc">{product.desc}</p>
-
           <div className="extra-info">
             <h4>About</h4>
             <p>

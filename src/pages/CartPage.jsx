@@ -18,13 +18,16 @@
 
 import React from "react";
 import { useCart } from "../context/CartContext";
+import { useSelector } from "react-redux";
 import "../styles/Cart.css";
 
 const CartPage = () => {
   const { items, updateQty, removeFromCart, total, clearCart } = useCart();
+  const name= useSelector ((state)=>(state.name.name))
 
   if (!items.length)
     return <div className="cart-empty luxury">Your cart is empty.</div>;
+  <h1>your name is {name}</h1>
 
   return (
     <section className="cart-page luxury">
